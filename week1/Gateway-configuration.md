@@ -53,3 +53,9 @@ service iptables save
 
 service iptables restart
 ```
+
+## Post-mortem
+Initial VM was setup, statically, as a DHCP server so that the other machines on the subnet could be reached. Later, the DHCP server was setup as a dedicated machine. The DHCP server was used to automatically assign addresses to the other machines. 
+
+DNS server required packages bind and bind-utils, BIND is an acronym for Berkely Internet Name Domain. It's software that performs name to IP conversion. DNS configuration involves creating forward lookup zones for the hostnames, as well as reverse lookup zones. 
+Forward lookup zones map hostnames to IP addresses whereas reverse lookup zones map IP addresses to hostnames.
