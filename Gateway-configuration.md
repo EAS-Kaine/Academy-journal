@@ -1,4 +1,4 @@
-# Task 3
+# Gateway Manual Configuration
 
 ## Overview
 Setup NAT with IP Table rules so the VM acts as a gateway enabling public network access for the LAN.
