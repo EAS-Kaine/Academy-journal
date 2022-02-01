@@ -1,0 +1,11 @@
+Vagrant.configure("2") do |c|
+  c.berkshelf.enabled = false if Vagrant.has_plugin?("vagrant-berkshelf")
+  c.vm.box = "bento/centos-8"
+  c.vm.hostname = "default-centos-8.vagrantup.com"
+  c.vm.synced_folder ".", "/vagrant", disabled: true
+  c.vm.synced_folder "/Users/kainebent/.kitchen/cache", "/tmp/omnibus/cache", create: true
+  c.vm.provider :virtualbox do |p|
+    p.name = "kitchen-test_write_file-default-centos-8-1df22f0d-dd1b-437e-9f99-57a8f3bc09b9"
+    p.customize ["modifyvm", :id, "--audio", "none"]
+  end
+end

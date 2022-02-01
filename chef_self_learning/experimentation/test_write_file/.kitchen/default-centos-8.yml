@@ -1,0 +1,7 @@
+---
+hostname: 127.0.0.1
+port: '2222'
+username: vagrant
+ssh_key: "/Users/kainebent/.vagrant.d/insecure_private_key"
+last_action: create
+last_error: Kitchen::ActionFailed
